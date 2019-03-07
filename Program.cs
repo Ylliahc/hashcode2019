@@ -6,18 +6,22 @@ namespace hashcode2019
 {
     class Program
     {
-        private const string V = "D:\\Users\\xchailly\\Documents\\Hashcode\\2019\\d_pet_pictures.txt";
+        private const string V = "D:\\Hashcode\\2019\\d_pet_pictures.txt";
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-
-            string path = V;
-
-            var reader = new InputReader(path);
-
-            var toto = reader.Read();
-
+            try
+            {
+                string path = V;
+                var reader = new InputReader(path);
+                var toto = reader.Read();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
             Console.WriteLine("This is the end");
         }
     }
