@@ -15,7 +15,9 @@ namespace hashcode2019
             {
                 string path = V;
                 var reader = new InputReader(path);
-                var toto = reader.Read();
+                var slideImages = reader.Read();
+
+                
             }
             catch(Exception e)
             {
