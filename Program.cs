@@ -6,7 +6,7 @@ namespace hashcode2019
 {
     class Program
     {
-        private const string V = "D:\\Hashcode\\2019\\d_pet_pictures.txt";
+        private const string V = "D:\\Hashcode\\2019\\Problem\\d_pet_pictures.txt";
 
         static void Main(string[] args)
         {
@@ -15,7 +15,9 @@ namespace hashcode2019
             {
                 string path = V;
                 var reader = new InputReader(path);
-                var toto = reader.Read();
+                var slideImages = reader.Read();
+
+
             }
             catch(Exception e)
             {

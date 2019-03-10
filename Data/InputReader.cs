@@ -27,12 +27,15 @@ namespace hashcode2019.Data
             using(var dataFileStream = new StreamReader(Path))
             {
                 int numberOfLine = int.Parse(dataFileStream.ReadLine());
+                int currentId = 0;
 
                 while(!dataFileStream.EndOfStream)
                 {
                     var lineRead = dataFileStream.ReadLine();
-
-                    slideImages.Add(converter.Convert(line: lineRead));                   
+                    var image = converter.Convert(line: lineRead);
+                    image.Id = currentId.ToString();
+                    slideImages.Add(image);
+                    currentId++;
                 }
             }
             return slideImages;
